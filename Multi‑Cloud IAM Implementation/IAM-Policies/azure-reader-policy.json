@@ -1,0 +1,19 @@
+{
+  "Name": "Custom-Reader-Policy",
+  "IsCustom": true,
+  "Description": "Provides read-only access to Azure resources without modification permissions.",
+  "Actions": [
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Compute/virtualMachines/read",
+    "Microsoft.Storage/storageAccounts/read",
+    "Microsoft.Network/*/read"
+  ],
+  "NotActions": [
+    "Microsoft.Compute/virtualMachines/write",
+    "Microsoft.Storage/storageAccounts/write",
+    "Microsoft.Network/*/write"
+  ],
+  "AssignableScopes": [
+    "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  ]
+}
